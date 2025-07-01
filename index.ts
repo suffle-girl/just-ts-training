@@ -1,4 +1,4 @@
-const numberToString = (num: number): string => {
+export const numberToString = (num: number): string => {
   return String(num);
 };
 console.log(
