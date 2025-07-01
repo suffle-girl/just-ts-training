@@ -12,3 +12,7 @@ export const setAlarm = (employed: boolean, vacation: boolean) => {
   if (employed === true && vacation === false) return true;
   return false;
 };
+
+export const setAlarmLean = (employed: boolean, vacation: boolean) => {
+  return employed && !vacation;
+};

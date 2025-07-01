@@ -7,3 +7,6 @@ export var setAlarm = function (employed, vacation) {
         return true;
     return false;
 };
+export var setAlarmLean = function (employed, vacation) {
+    return employed && !vacation;
+};
