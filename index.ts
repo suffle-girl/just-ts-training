@@ -7,3 +7,8 @@ console.log(
   "type: ",
   typeof numberToString(6)
 );
+
+export const setAlarm = (employed: boolean, vacation: boolean) => {
+  if (employed === true && vacation === false) return true;
+  return false;
+};
