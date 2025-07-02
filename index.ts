@@ -16,3 +16,11 @@ export const setAlarm = (employed: boolean, vacation: boolean) => {
 export const setAlarmLean = (employed: boolean, vacation: boolean) => {
   return employed && !vacation;
 };
+
+export const growLoop = (arr: number[]): number => {
+  let solution = 1;
+  for (let i = 0; i < arr.length; i++) {
+    solution *= arr[i];
+  }
+  return solution;
+};

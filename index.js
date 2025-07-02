@@ -10,3 +10,10 @@ export var setAlarm = function (employed, vacation) {
 export var setAlarmLean = function (employed, vacation) {
     return employed && !vacation;
 };
+export var growLoop = function (arr) {
+    var solution = 1;
+    for (var i = 0; i < arr.length; i++) {
+        solution *= arr[i];
+    }
+    return solution;
+};
