@@ -10,10 +10,14 @@ export var setAlarm = function (employed, vacation) {
 export var setAlarmLean = function (employed, vacation) {
     return employed && !vacation;
 };
+// Given a non-empty array of integers, return the result of multiplying the values together in order.
 export var growLoop = function (arr) {
     var solution = 1;
     for (var i = 0; i < arr.length; i++) {
         solution *= arr[i];
     }
     return solution;
+};
+export var grow = function (arr) {
+    return arr.reduce(function (acc, curr) { return acc * curr; }, 1);
 };
