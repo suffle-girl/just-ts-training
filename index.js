@@ -36,3 +36,12 @@ export var reverseString = function (str) {
 };
 console.log("reverseString: ", reverseString("world"));
 console.log("reverseString: ", reverseString("is on fire!"));
+export var showTimeInMilliseconds = function (h, m, s) {
+    return Number(h * 3.6e6 + m * 60000 + s * 1000);
+};
+export var showTimeInMilliseconds2 = function (h, m, s) {
+    var seconds = function (s) { return s * 1000; };
+    var minutes = function (m) { return m * 60 * 1000; };
+    var hours = function (h) { return h * 60 * 60 * 1000; };
+    return hours(h) + minutes(m) + seconds(s);
+};

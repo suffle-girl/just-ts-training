@@ -55,3 +55,23 @@ export const reverseString = (str: string): string => {
 };
 console.log("reverseString: ", reverseString("world"));
 console.log("reverseString: ", reverseString("is on fire!"));
+
+export const showTimeInMilliseconds = (
+  h: number,
+  m: number,
+  s: number
+): number => {
+  return Number(h * 3.6e6 + m * 60000 + s * 1000);
+};
+
+export const showTimeInMilliseconds2 = (
+  h: number,
+  m: number,
+  s: number
+): number => {
+  const seconds = (s: number) => s * 1000;
+  const minutes = (m: number) => m * 60 * 1000;
+  const hours = (h: number) => h * 60 * 60 * 1000;
+
+  return hours(h) + minutes(m) + seconds(s);
+};
