@@ -49,3 +49,9 @@ export const zeroFuel = (
 ): boolean => {
   return distance <= mpg * fuelLeft;
 };
+
+export const reverseString = (str: string): string => {
+  return str.split("").reverse().join("");
+};
+console.log("reverseString: ", reverseString("world"));
+console.log("reverseString: ", reverseString("is on fire!"));

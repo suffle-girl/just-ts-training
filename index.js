@@ -31,3 +31,8 @@ export var zeroFuelIf = function (distance, mpg, fuelLeft) {
 export var zeroFuel = function (distance, mpg, fuelLeft) {
     return distance <= mpg * fuelLeft;
 };
+export var reverseString = function (str) {
+    return str.split("").reverse().join("");
+};
+console.log("reverseString: ", reverseString("world"));
+console.log("reverseString: ", reverseString("is on fire!"));
