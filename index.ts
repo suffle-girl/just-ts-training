@@ -75,3 +75,7 @@ export const showTimeInMilliseconds2 = (
 
   return hours(h) + minutes(m) + seconds(s);
 };
+
+export const makeUpperCase = (str: string): string => {
+  return str.toUpperCase();
+};

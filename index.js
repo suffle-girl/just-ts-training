@@ -45,3 +45,6 @@ export var showTimeInMilliseconds2 = function (h, m, s) {
     var hours = function (h) { return h * 60 * 60 * 1000; };
     return hours(h) + minutes(m) + seconds(s);
 };
+export var makeUpperCase = function (str) {
+    return str.toUpperCase();
+};
