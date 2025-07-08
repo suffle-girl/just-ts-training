@@ -79,3 +79,11 @@ export const showTimeInMilliseconds2 = (
 export const makeUpperCase = (str: string): string => {
   return str.toUpperCase();
 };
+
+export const reverseSeq = (n: number): number[] => {
+  const reverseArray: number[] = [];
+  for (let i = n; i > 0; i--) {
+    reverseArray.push(i);
+  }
+  return reverseArray;
+};

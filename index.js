@@ -48,3 +48,10 @@ export var showTimeInMilliseconds2 = function (h, m, s) {
 export var makeUpperCase = function (str) {
     return str.toUpperCase();
 };
+export var reverseSeq = function (n) {
+    var reverseArray = [];
+    for (var i = n; i > 0; i--) {
+        reverseArray.push(i);
+    }
+    return reverseArray;
+};
