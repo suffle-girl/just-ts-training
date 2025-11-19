@@ -87,3 +87,15 @@ export const reverseSeq = (n: number): number[] => {
   }
   return reverseArray;
 };
+
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+export const isIsogram = (str: string): boolean => {
+  const array = str.toLowerCase().split("");
+  for (let i = 0; i <= str.length; i++) {
+    let count = 0;
+    const letter = str[i];
+    array.forEach((item) => (item === letter ? count++ : null));
+    if (count > 1) return false;
+  }
+  return true;
+};
