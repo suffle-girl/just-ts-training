@@ -99,3 +99,10 @@ export const isIsogram = (str: string): boolean => {
   }
   return true;
 };
+
+export const DNAtoRNA = (dna: string): string => {
+  const dnaArray = dna.split("");
+  const rnaArray = dnaArray.map((letter) => (letter === "T" ? "U" : letter));
+
+  return rnaArray.join("");
+};

@@ -72,3 +72,32 @@ export var isIsogram = function (str) {
     }
     return true;
 };
+// Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+// (1, 0) --> 1 (1 + 0 = 1)
+// (1, 2) --> 3 (1 + 2 = 3)
+// (0, 1) --> 1 (0 + 1 = 1)
+// (1, 1) --> 1 (1 since both are same)
+// (-1, 0) --> -1 (-1 + 0 = -1)
+// (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+export var getSum = function (a, b) {
+    var newArray = [];
+    newArray.push(a);
+    console.log("newArray", newArray);
+    var nextNumber = a + 1;
+    for (var i = 1; i <= b; i++) {
+        //const nextNumber = a + i;
+        newArray.push(nextNumber);
+        nextNumber++;
+        //console.log("newArray", newArray);
+    }
+    console.log(newArray);
+    // let sum = 0;
+    // if (a < b) {
+    //   //(3, 6) => 3 + 4 + 5 + 6 = 18
+    //   for (let i = 0; i++; i < b) {
+    //     sum++;
+    //   }
+    // }
+    return 1;
+};
+getSum(-1, 5);
