@@ -106,3 +106,9 @@ export const DNAtoRNA = (dna: string): string => {
 
   return rnaArray.join("");
 };
+
+export const hoopCount = (n: number): string => {
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
+};
