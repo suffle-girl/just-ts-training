@@ -112,3 +112,29 @@ export const hoopCount = (n: number): string => {
     ? "Great, now move on to tricks"
     : "Keep at it until you get it";
 };
+
+// Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+// (1, 0) --> 1 (1 + 0 = 1)
+// (1, 2) --> 3 (1 + 2 = 3)
+// (0, 1) --> 1 (0 + 1 = 1)
+// (1, 1) --> 1 (1 since both are same)
+// (-1, 0) --> -1 (-1 + 0 = -1)
+// (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+
+export function getSumComplicated(a: number, b: number): number {
+  if (a === b) return a;
+  const sortedNumbers = [a, b].sort((a, b) => a - b);
+  const array = [];
+  for (let i = sortedNumbers[0]; i <= sortedNumbers[1]; i++) {
+    array.push(i);
+  }
+  const initialValue = sortedNumbers[0];
+  const sum = array.reduce((acc, curr) => acc + curr);
+  return sum;
+}
+
+export function getSum(a: number, b: number): number {
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
+  return min === max ? min : ((min + max) * (max - min + 1)) / 2;
+}
