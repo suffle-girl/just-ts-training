@@ -138,3 +138,16 @@ export function getSum(a: number, b: number): number {
   const max = Math.max(a, b);
   return min === max ? min : ((min + max) * (max - min + 1)) / 2;
 }
+
+export const disemvowelClunky = (str: string): string => {
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  const stringToArray = str.split("");
+  const trolled = stringToArray.map((letter) =>
+    vowels.includes(letter) ? "" : letter
+  );
+  return trolled.join("");
+};
+
+export const disemvowel = (str: string): string => {
+  return str.replace(/[aeiou]/gi, "");
+};
