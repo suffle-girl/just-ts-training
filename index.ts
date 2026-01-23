@@ -151,3 +151,15 @@ export const disemvowelClunky = (str: string): string => {
 export const disemvowel = (str: string): string => {
   return str.replace(/[aeiou]/gi, "");
 };
+
+export const cockroachSpeed = (s: number): number => {
+  const mPerH = s * 1000;
+  const cmPerH = mPerH * 100;
+  const cmPerM = cmPerH / 60;
+  const cmPerS = cmPerM / 60;
+  return Math.floor(cmPerS);
+};
+
+export const cockroachSpeedWholesome = (s: number): number => {
+  return Math.floor((s * 100 * 10) / 6 ** 2);
+};
