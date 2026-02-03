@@ -163,3 +163,5 @@ export const cockroachSpeed = (s: number): number => {
 export const cockroachSpeedWholesome = (s: number): number => {
   return Math.floor((s * 100 * 10) / 6 ** 2);
 };
+
+export const square = (number: number) => number ** 2;
