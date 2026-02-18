@@ -165,3 +165,15 @@ export const cockroachSpeedWholesome = (s: number): number => {
 };
 
 export const square = (number: number) => number ** 2;
+
+export const areYouPlayingBanjo = (name: string): string => {
+  const firstLetter = name.split("")[0];
+  const startsWithR = firstLetter === "r" || firstLetter === "R";
+  return startsWithR ? name + " plays banjo" : name + " does not play banjo";
+};
+
+export const areYouPlayingBanjoShort = (name: string): string => {
+  return name.startsWith("r") || name.startsWith("R")
+    ? `${name} plays banjo`
+    : `${name} does not play`;
+};
