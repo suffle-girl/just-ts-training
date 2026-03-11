@@ -184,3 +184,8 @@ export const highAndLow = (numbers: string): string => {
   const min = Math.min(...arrayOfNumbers);
   return `${max} ${min}`;
 };
+
+export const printerError = (s: string): string => {
+  const errors = s.replace(/[a-m]/gi, "");
+  return `${errors.length}/${s.length}`;
+};
