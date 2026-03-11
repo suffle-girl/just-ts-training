@@ -5,7 +5,7 @@ console.log(
   "numberToString: ",
   numberToString(6),
   "type: ",
-  typeof numberToString(6)
+  typeof numberToString(6),
 );
 
 export const setAlarm = (employed: boolean, vacation: boolean) => {
@@ -34,7 +34,7 @@ export const grow = (arr: number[]): number => {
 export const zeroFuelIf = (
   distance: number,
   mpg: number,
-  fuelLeft: number
+  fuelLeft: number,
 ): boolean => {
   if (distance <= mpg * fuelLeft) {
     return true;
@@ -45,7 +45,7 @@ export const zeroFuelIf = (
 export const zeroFuel = (
   distance: number,
   mpg: number,
-  fuelLeft: number
+  fuelLeft: number,
 ): boolean => {
   return distance <= mpg * fuelLeft;
 };
@@ -59,7 +59,7 @@ console.log("reverseString: ", reverseString("is on fire!"));
 export const showTimeInMilliseconds = (
   h: number,
   m: number,
-  s: number
+  s: number,
 ): number => {
   return Number(h * 3.6e6 + m * 60000 + s * 1000);
 };
@@ -67,7 +67,7 @@ export const showTimeInMilliseconds = (
 export const showTimeInMilliseconds2 = (
   h: number,
   m: number,
-  s: number
+  s: number,
 ): number => {
   const seconds = (s: number) => s * 1000;
   const minutes = (m: number) => m * 60 * 1000;
@@ -143,7 +143,7 @@ export const disemvowelClunky = (str: string): string => {
   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
   const stringToArray = str.split("");
   const trolled = stringToArray.map((letter) =>
-    vowels.includes(letter) ? "" : letter
+    vowels.includes(letter) ? "" : letter,
   );
   return trolled.join("");
 };
@@ -176,4 +176,11 @@ export const areYouPlayingBanjoShort = (name: string): string => {
   return name.startsWith("r") || name.startsWith("R")
     ? `${name} plays banjo`
     : `${name} does not play`;
+};
+
+export const highAndLow = (numbers: string): string => {
+  const arrayOfNumbers = numbers.split(" ").map((item) => Number(item));
+  const max = Math.max(...arrayOfNumbers);
+  const min = Math.min(...arrayOfNumbers);
+  return `${max} ${min}`;
 };
