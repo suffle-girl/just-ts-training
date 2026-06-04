@@ -201,3 +201,12 @@ export const between = (a: number, b: number): number[] => {
   }
   return arrayOfNumbers;
 };
+
+export const inArray = (a1: string[], a2: string[]): string[] => {
+  const r: string[] = [];
+  a1.map((item) => {
+    const foundItem = a2.find((i) => i.includes(item));
+    if (foundItem) r.push(item);
+  });
+  return r.sort();
+};
