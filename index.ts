@@ -193,3 +193,11 @@ export const printerError = (s: string): string => {
 export const lineNumbering = (array: string[]): string[] => {
   return array.map((item, index) => `${index + 1}: ${item}`);
 };
+
+export const between = (a: number, b: number): number[] => {
+  const arrayOfNumbers: number[] = [];
+  for (let i = a; i <= b; i++) {
+    arrayOfNumbers.push(i);
+  }
+  return arrayOfNumbers;
+};
