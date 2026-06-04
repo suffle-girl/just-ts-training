@@ -189,3 +189,7 @@ export const printerError = (s: string): string => {
   const errors = s.replace(/[a-m]/gi, "");
   return `${errors.length}/${s.length}`;
 };
+
+export const lineNumbering = (array: string[]): string[] => {
+  return array.map((item, index) => `${index + 1}: ${item}`);
+};
