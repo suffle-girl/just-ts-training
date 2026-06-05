@@ -210,3 +210,7 @@ export const inArray = (a1: string[], a2: string[]): string[] => {
   });
   return r.sort();
 };
+
+export const checkForFactor = (base: number, factor: number): boolean => {
+  return base % factor === 0;
+};
