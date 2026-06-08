@@ -233,3 +233,17 @@ export const toAlternatingCase = (s: string): string => {
 export const greet = (name: string, owner: string): string => {
   return name === owner ? "Hello boss" : "Hello guest";
 };
+
+export const smallEnough = (a: number[], limit: number): boolean => {
+  let isSmallEnough = true;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] > limit) {
+      isSmallEnough = false;
+    }
+  }
+  return isSmallEnough;
+};
+
+export const smallEnough2 = (a: number[], limit: number): boolean => {
+  return Math.max(...a) <= limit;
+};
