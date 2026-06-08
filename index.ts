@@ -229,3 +229,7 @@ export const toAlternatingCase = (s: string): string => {
 
   return alternatedStringArray.join("");
 };
+
+export const greet = (name: string, owner: string): string => {
+  return name === owner ? "Hello boss" : "Hello guest";
+};
