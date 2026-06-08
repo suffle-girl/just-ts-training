@@ -214,3 +214,18 @@ export const inArray = (a1: string[], a2: string[]): string[] => {
 export const checkForFactor = (base: number, factor: number): boolean => {
   return base % factor === 0;
 };
+
+export const toAlternatingCase = (s: string): string => {
+  const alternatedStringArray = [];
+  for (let i = 0; i < s.length; i++) {
+    let symbol = s[i];
+    if (symbol === symbol.toLowerCase()) {
+      symbol = symbol.toUpperCase();
+    } else if (symbol === symbol.toUpperCase()) {
+      symbol = symbol.toLowerCase();
+    }
+    alternatedStringArray.push(symbol);
+  }
+
+  return alternatedStringArray.join("");
+};
