@@ -247,3 +247,11 @@ export const smallEnough = (a: number[], limit: number): boolean => {
 export const smallEnough2 = (a: number[], limit: number): boolean => {
   return Math.max(...a) <= limit;
 };
+
+export const sumMix = (x: any[]): number => {
+  const initialValue = 0;
+  return x.reduce(
+    (accumulator, currentValue) => accumulator + Number(currentValue),
+    initialValue,
+  );
+};
