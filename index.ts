@@ -255,3 +255,12 @@ export const sumMix = (x: any[]): number => {
     initialValue,
   );
 };
+
+export const sayHello = (
+  name: string[],
+  city: string,
+  state: string,
+): string => {
+  const wholeName = name.join(" ");
+  return `Hello, ${wholeName}! Welcome to ${city}, ${state}!`;
+};
