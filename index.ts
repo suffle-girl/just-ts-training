@@ -264,3 +264,7 @@ export const sayHello = (
   const wholeName = name.join(" ");
   return `Hello, ${wholeName}! Welcome to ${city}, ${state}!`;
 };
+
+export const xor = (a: boolean, b: boolean): boolean => {
+  return a !== b;
+};
